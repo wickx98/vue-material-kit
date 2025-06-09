@@ -62,10 +62,11 @@ onUnmounted(() => {
               class="text-white pt-3 mt-n5 me-2"
               :style="{ display: 'inline-block ' }"
             >
-              UrbanPulse Lanka
+              Material Kit 2
             </h1>
             <p class="lead text-white px-5 mt-3" :style="{ fontWeight: '500' }">
-              Welcome to UrbanPulse Lanka — your digital gateway to a smarter, cleaner, and more connected urban future. Our mission is to highlight local challenges and promote sustainable, tech-driven solutions that enhance everyday city living.
+              Start the Development With Bootstrap 5 Design System inspired by
+              Material Design.
             </p>
           </div>
         </div>
@@ -74,11 +75,11 @@ onUnmounted(() => {
   </Header>
 
   <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
-    <!-- <PresentationCounter />
+    <PresentationCounter />
     <PresentationInformation />
     <PresentationExample :data="data" />
     <PresentationPages />
-    <BuiltByDevelopers /> -->
+    <BuiltByDevelopers />
 
     <div class="container">
       <div class="row">
@@ -261,7 +262,7 @@ onUnmounted(() => {
         </div>
       </div>
     </div>
-    <!-- <div class="py-5">
+    <div class="py-5">
       <div class="container">
         <div class="row">
           <div class="col-lg-5 ms-auto">
@@ -290,7 +291,7 @@ onUnmounted(() => {
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
   <DefaultFooter />
 </template>
