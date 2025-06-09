@@ -23,6 +23,10 @@ import ElDropdowns from "../layouts/sections/elements/dropdowns/DropdownsView.vu
 import ElProgressBars from "../layouts/sections/elements/progress-bars/ProgressBarsView.vue";
 import ElToggles from "../layouts/sections/elements/toggles/TogglesView.vue";
 import ElTypography from "../layouts/sections/elements/typography/TypographyView.vue";
+import LocalIssues from "../views/LandingPages/LocalIssues/LocalIssuesView.vue";
+import Community from "../views/LandingPages/Community/Community.vue";
+import Solutions from "../views/LandingPages/Solutions/Solutions.vue";
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -35,6 +39,22 @@ const router = createRouter({
       path: "/pages/landing-pages/about-us",
       name: "about",
       component: AboutView,
+    },
+    {
+      path: "/pages/landing-pages/local-issues",
+      name: "local-issues",
+      component: LocalIssues,
+    },
+
+    {
+      path: "/pages/landing-pages/Solutions",
+      name: "Solutions",
+      component: Solutions,
+    },
+    {
+      path: "/pages/landing-pages/Community",
+      name: "Community",
+      component: Community,
     },
     {
       path: "/pages/landing-pages/contact-us",

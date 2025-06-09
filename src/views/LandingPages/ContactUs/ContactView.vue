@@ -1,123 +1,135 @@
 <script setup>
-import { onMounted } from "vue";
+import { onMounted, onUnmounted } from "vue";
 
-//example components
-import DefaultNavbar from "@/examples/navbars/NavbarDefault.vue";
-import DefaultFooter from "@/examples/footers/FooterDefault.vue";
+import DefaultNavbar from "../../../examples/navbars/NavbarDefault.vue";
+import DefaultFooter from "../../../examples/footers/FooterDefault.vue";
 
-//image
-import image from "@/assets/img/illustrations/illustration-signin.jpg";
+import bg0 from "@/assets/img/bg9.jpg";
 
-//material components
+import Typed from "typed.js";
+
 import MaterialInput from "@/components/MaterialInput.vue";
 import MaterialTextArea from "@/components/MaterialTextArea.vue";
 import MaterialButton from "@/components/MaterialButton.vue";
 
-// material-input
 import setMaterialInput from "@/assets/js/material-input";
+
+const body = document.getElementsByTagName("body")[0];
+
 onMounted(() => {
+  body.classList.add("about-us");
+  body.classList.add("bg-gray-200");
+
   setMaterialInput();
+
+  if (document.getElementById("typed")) {
+    new Typed("#typed", {
+      stringsElement: "#typed-strings",
+      typeSpeed: 90,
+      backSpeed: 90,
+      backDelay: 200,
+      startDelay: 500,
+      loop: true,
+    });
+  }
+});
+
+onUnmounted(() => {
+  body.classList.remove("about-us");
+  body.classList.remove("bg-gray-200");
 });
 </script>
+
 <template>
-  <div class="container position-sticky z-index-sticky top-0">
-    <div class="row">
-      <div class="col-12">
-        <DefaultNavbar
-          :sticky="true"
-          :action="{
-            route: 'https://www.creative-tim.com/product/vue-material-kit-pro',
-            color: 'bg-gradient-success',
-            label: 'Buy Now',
-          }"
-        />
-      </div>
-    </div>
-  </div>
-  <section>
-    <div class="page-header min-vh-100">
+  <DefaultNavbar
+    :action="{
+      route: 'javascript:;',
+      label: 'Send Feedback',
+      color: 'btn-white',
+    }"
+    transparent
+  />
+
+  <header class="bg-gradient-dark">
+    <div
+      class="page-header min-vh-75"
+      :style="{ backgroundImage: `url(${bg0})` }"
+    >
+      <span class="mask bg-gradient-dark opacity-6"></span>
       <div class="container">
-        <div class="row">
-          <div
-            class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 start-0 text-center justify-content-center flex-column"
-          >
-            <div
-              class="position-relative h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center"
-              :style="{
-                backgroundImage: `url(${image})`,
-                backgroundSize: 'cover',
-              }"
-              loading="lazy"
-            ></div>
-          </div>
-          <div
-            class="mt-8 col-xl-5 col-lg-6 col-md-7 d-flex flex-column ms-auto me-auto ms-lg-auto me-lg-5"
-          >
-            <div
-              class="card d-flex blur justify-content-center shadow-lg my-sm-0 my-sm-6 mt-8 mb-5"
-            >
-              <div
-                class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent"
-              >
-                <div
-                  class="bg-gradient-success shadow-success border-radius-lg p-3"
-                >
-                  <h3 class="text-white text-success mb-0">Contact us</h3>
-                </div>
-              </div>
-              <div class="card-body">
-                <p class="pb-3">
-                  For further questions, including partnership opportunities,
-                  please email hello@creative-tim.com or contact using our
-                  contact form.
-                </p>
-                <form id="contact-form" method="post" autocomplete="off">
-                  <div class="card-body p-0 my-3">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <MaterialInput
-                          class="input-group-static mb-4"
-                          type="text"
-                          label="Full Name"
-                          placeholder="Full Name"
-                        />
-                      </div>
-                      <div class="col-md-6 ps-md-2">
-                        <MaterialInput
-                          class="input-group-static mb-4"
-                          type="email"
-                          label="Email"
-                          placeholder="hello@creative-tim.com"
-                        />
-                      </div>
-                    </div>
-                    <div class="form-group mb-0 mt-md-0 mt-4">
-                      <MaterialTextArea
-                        id="message"
-                        class="input-group-static mb-4"
-                        :rows="6"
-                        placeholder="Describe your problem in at least 250 characters"
-                        >How can we help you?</MaterialTextArea
-                      >
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12 text-center">
-                        <MaterialButton
-                          variant="gradient"
-                          color="success"
-                          class="mt-3 mb-0"
-                          >Send Message</MaterialButton
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mx-auto my-auto">
+            <h1 class="text-white">
+              We value your <span id="typed" class="text-white"></span>
+            </h1>
+            <div id="typed-strings" class="d-none">
+              <h1>Feedback</h1>
+              <h1>Suggestions</h1>
+              <h1>Thoughts</h1>
+              <h1>Questions</h1>
             </div>
+            <p class="lead mb-4 text-white opacity-8">
+              Please share your thoughts to help us improve and serve you better.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </header>
+
+  <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
+    <div class="row">
+      <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center">
+        <div
+          class="w-100 h-100 border-radius-lg"
+          :style="{
+            backgroundImage: `url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            minHeight: '400px',
+          }"
+          loading="lazy"
+        ></div>
+      </div>
+
+      <div class="col-lg-6 p-4">
+        <div class="card shadow-lg p-4">
+          <h3 class="text-center mb-4 text-success">Send Us Your Feedback</h3>
+          <form id="feedback-form" autocomplete="off">
+            <div class="mb-3">
+              <MaterialInput
+                type="text"
+                label="Full Name"
+                placeholder="Your full name"
+                class="input-group-static"
+              />
+            </div>
+            <div class="mb-3">
+              <MaterialInput
+                type="email"
+                label="Email Address"
+                placeholder="your.email@example.com"
+                class="input-group-static"
+              />
+            </div>
+            <div class="mb-3">
+              <MaterialTextArea
+                label="Your Message"
+                placeholder="Write your feedback here..."
+                :rows="6"
+                class="input-group-static"
+              />
+            </div>
+            <div class="text-center">
+              <MaterialButton variant="gradient" color="success">
+                Send Message
+              </MaterialButton>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <DefaultFooter />
 </template>
