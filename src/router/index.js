@@ -4,7 +4,6 @@ import AboutView from "../views/LandingPages/AboutUs/AboutView.vue";
 import CommunityView from "../views/LandingPages/Community/CommunityView.vue";
 import SolutionsView from "../views/LandingPages/Solutions/SolutionsView.vue";
 import ContactView from "../views/LandingPages/ContactUs/ContactView.vue";
-import AuthorView from "../views/LandingPages/Author/AuthorView.vue";
 import SignInBasicView from "../views/LandingPages/SignIn/BasicView.vue";
 import PageHeaders from "../layouts/sections/page-sections/page-headers/HeadersView.vue";
 import PageFeatures from "../layouts/sections/page-sections/features/FeaturesView.vue";
@@ -53,11 +52,6 @@ const router = createRouter({
       path: "/pages/landing-pages/feedback",
       name: "feedback",
       component: ContactView,
-    },
-    {
-      path: "/pages/landing-pages/author",
-      name: "author",
-      component: AuthorView,
     },
     {
       path: "/pages/landing-pages/basic",
