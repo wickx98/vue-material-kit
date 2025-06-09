@@ -176,6 +176,12 @@ watch(
                         <span>About Us</span>
                       </RouterLink>
                       <RouterLink
+                        :to="{ name: 'local-issues' }"
+                        class="dropdown-item border-radius-md"
+                      >
+                        <span>Local Issues</span>
+                      </RouterLink>
+                      <RouterLink
                         :to="{ name: 'solution' }"
                         class="dropdown-item border-radius-md"
                       >
@@ -221,6 +227,12 @@ watch(
                 >
                   <span>About Us</span>
                 </RouterLink>
+                <RouterLink
+                        :to="{ name: 'local-issues' }"
+                        class="dropdown-item border-radius-md"
+                      >
+                        <span>Local Issues</span>
+                      </RouterLink>
                 <RouterLink
                   :to="{ name: 'solution' }"
                   class="dropdown-item border-radius-md"

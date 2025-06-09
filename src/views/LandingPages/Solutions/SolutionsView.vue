@@ -4,8 +4,6 @@ import { onMounted, onUnmounted } from "vue";
 import DefaultNavbar from "../../../examples/navbars/NavbarDefault.vue";
 import DefaultFooter from "../../../examples/footers/FooterDefault.vue";
 
-import bg0 from "@/assets/img/bg11.jpg";
-
 import Typed from "typed.js";
 
 const body = document.getElementsByTagName("body")[0];
@@ -91,50 +89,58 @@ onUnmounted(() => {
       </p>
 
       <div class="row">
+        <!-- Smart Traffic Control -->
         <div class="col-md-6 col-lg-3 mb-4">
           <div class="card h-100 border-0 shadow">
             <div class="card-body text-center">
               <div class="text-danger display-4 mb-3">🚦</div>
               <h5 class="card-title">Smart Traffic Control</h5>
               <p class="card-text text-muted">
-                Adaptive traffic signals and AI-powered congestion prediction.
+                Our city roads face severe congestion during peak hours. This solution implements AI-based adaptive traffic signals that adjust in real-time based on traffic flow. Combined with GPS data and vehicle sensors, it reduces waiting time and improves fuel efficiency for commuters.
               </p>
+              
             </div>
           </div>
         </div>
 
+        <!-- Energy Saving Systems -->
         <div class="col-md-6 col-lg-3 mb-4">
           <div class="card h-100 border-0 shadow">
             <div class="card-body text-center">
               <div class="text-warning display-4 mb-3">⚡</div>
               <h5 class="card-title">Energy Saving Systems</h5>
               <p class="card-text text-muted">
-                IoT-enabled smart grids and efficient power distribution.
+                Smart grids powered by IoT manage energy distribution efficiently, preventing wastage. Automated street lighting and solar-powered public buildings reduce electricity bills while promoting renewable energy use across the city.
               </p>
+              
             </div>
           </div>
         </div>
 
+        <!-- Waste Recycling Tech -->
         <div class="col-md-6 col-lg-3 mb-4">
           <div class="card h-100 border-0 shadow">
             <div class="card-body text-center">
               <div class="text-success display-4 mb-3">♻️</div>
               <h5 class="card-title">Waste Recycling Tech</h5>
               <p class="card-text text-muted">
-                Sensor-driven waste collection and automated sorting.
+                Smart bins equipped with fill-level sensors notify collectors in real time. Recyclable and non-recyclable items are automatically sorted using machine learning, streamlining waste management and improving recycling rates in densely populated areas.
               </p>
+              
             </div>
           </div>
         </div>
 
+        <!-- Urban Greening -->
         <div class="col-md-6 col-lg-3 mb-4">
           <div class="card h-100 border-0 shadow">
             <div class="card-body text-center">
               <div class="text-success display-4 mb-3">🌳</div>
               <h5 class="card-title">Urban Greening</h5>
               <p class="card-text text-muted">
-                Vertical gardens, green rooftops, and community parks.
+                Greener cities cool down urban heat zones. Initiatives like rooftop gardens, vertical farming, and tree planting campaigns increase oxygen levels, reduce CO₂, and promote community wellness. Local schools and offices are encouraged to adopt these methods.
               </p>
+              
             </div>
           </div>
         </div>
