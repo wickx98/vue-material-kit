@@ -188,10 +188,10 @@ watch(
                         <span>Community</span>
                       </RouterLink>     
                       <RouterLink
-                        :to="{ name: 'contactus' }"
+                        :to="{ name: 'feedback' }"
                         class="dropdown-item border-radius-md"
                       >
-                        <span>Contact Us</span>
+                        <span>feed back</span>
                       </RouterLink>
                       
                       <div
@@ -234,10 +234,10 @@ watch(
                   <span>Community</span>
                 </RouterLink>
                 <RouterLink
-                  :to="{ name: 'contactus' }"
+                  :to="{ name: 'feedback' }"
                   class="dropdown-item border-radius-md"
                 >
-                  <span>Contact Us</span>
+                  <span>feed back</span>
                 </RouterLink>
                
                 <div

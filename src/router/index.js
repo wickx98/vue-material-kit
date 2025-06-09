@@ -50,8 +50,8 @@ const router = createRouter({
       component: CommunityView,
     },
     {
-      path: "/pages/landing-pages/contact-us",
-      name: "contactus",
+      path: "/pages/landing-pages/feedback",
+      name: "feedback",
       component: ContactView,
     },
     {
