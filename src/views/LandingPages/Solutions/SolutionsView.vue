@@ -45,7 +45,11 @@ onUnmounted(() => {
   <header class="bg-gradient-dark">
     <div
       class="page-header min-vh-75"
-      :style="{ backgroundImage: `url(${bg0})` }"
+      :style="{
+        backgroundImage: 'url(https://c4.wallpaperflare.com/wallpaper/15/147/646/city-traffic-wallpaper-preview.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }"
     >
       <span class="mask bg-gradient-dark opacity-6"></span>
       <div class="container">

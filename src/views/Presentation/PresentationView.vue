@@ -46,7 +46,7 @@ onUnmounted(() => {
   <Header>
     <div
       class="page-header min-vh-75"
-      :style="`background-image: url(${vueMkHeader})`"
+      :style="`background-image: url(https://www.pixelstalk.net/wp-content/uploads/2016/06/HD-wallpaper-palm-tree-light-city.jpg)`"
       loading="lazy"
     >
       <div class="container">

@@ -45,7 +45,7 @@ onUnmounted(() => {
   <header class="bg-gradient-dark">
     <div
       class="page-header min-vh-75"
-      :style="{ backgroundImage: `url(${bg0})` }"
+      style="background-image: url('https://amazingarchitecture.com/storage/9524/responsive-images/salesforce-transit-center-san-francisco-usa___media_library_original_787_443.jpg'); background-size: cover; background-position: center;"
     >
       <span class="mask bg-gradient-dark opacity-6"></span>
       <div class="container">
